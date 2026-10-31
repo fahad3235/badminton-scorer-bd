@@ -1,0 +1,102 @@
+// UI strings: English + Bengali. Bengali is stored as \uXXXX escapes by the
+// build step (see escape-i18n step in TEST_RESULTS.md) so sources stay pure ASCII.
+(function (root) {
+  'use strict';
+  var STR = {
+    en: {
+      title: 'Badminton Scorer BD',
+      tagline: 'Rally scoring for Bangladeshi courts \u2014 offline, no account needed.',
+      tabScore: 'Score',
+      tabHistory: 'History',
+      tabData: 'Data',
+      setupTitle: 'New match',
+      playerA: 'Player A name',
+      playerB: 'Player B name',
+      bestOf: 'Match format',
+      best1: 'Best of 1',
+      best3: 'Best of 3',
+      best5: 'Best of 5',
+      target: 'Points per set',
+      start: 'Start match',
+      nameError: 'Enter a name (1\u201340 characters) for both players.',
+      serving: 'Serving',
+      courtRight: 'right court',
+      courtLeft: 'left court',
+      set: 'Set',
+      setsWon: 'Sets won',
+      rallies: 'Rallies',
+      pointA: 'Point: ',
+      pointB: 'Point: ',
+      undo: 'Undo last point',
+      swap: 'Swap sides',
+      endMatch: 'End match early',
+      matchOver: 'Match over',
+      wins: 'wins',
+      newMatchBtn: 'New match',
+      historyTitle: 'Finished matches',
+      historyEmpty: 'No finished matches yet. Finish a match and it appears here.',
+      exportBtn: 'Export history (JSON)',
+      importBtn: 'Import history (JSON)',
+      importOk: 'Import OK \u2014 history replaced.',
+      importBad: 'Import rejected: file is not a valid Badminton Scorer history export. Your data is unchanged.',
+      eraseBtn: 'Erase all history',
+      eraseHint: 'Type DELETE below, then press Erase.',
+      eraseOk: 'History erased.',
+      eraseBad: 'Type DELETE exactly to erase.',
+      elapsed: 'Elapsed',
+      setHistory: 'Set scores',
+      disclaimer: 'Personal scoreboard tool. Rally scoring: win a set by 2 clear points, capped at 30 (21-point), 21 (15-point) or 15 (11-point) points. Not affiliated with BWF or any federation.'
+    },
+    bn: {
+      title: '\u09ac\u09cd\u09af\u09be\u09a1\u09ae\u09bf\u09a8\u09cd\u099f\u09a8 \u09b8\u09cd\u0995\u09cb\u09b0\u09be\u09b0 \u09ac\u09bf\u09a1\u09bf',
+      tagline: '\u09ac\u09be\u0982\u09b2\u09be\u09a6\u09c7\u09b6\u09c7\u09b0 \u0995\u09cb\u09b0\u09cd\u099f\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u09b0\u200d\u09cd\u09af\u09be\u09b2\u09bf \u09b8\u09cd\u0995\u09cb\u09b0\u09bf\u0982 \u2014 \u0985\u09ab\u09b2\u09be\u0987\u09a8, \u0995\u09cb\u09a8\u09cb \u0985\u09cd\u09af\u09be\u0995\u09be\u0989\u09a8\u09cd\u099f \u09b2\u09be\u0997\u09c7 \u09a8\u09be\u0964',
+      tabScore: '\u09b8\u09cd\u0995\u09cb\u09b0',
+      tabHistory: '\u0987\u09a4\u09bf\u09b9\u09be\u09b8',
+      tabData: '\u09a1\u09c7\u099f\u09be',
+      setupTitle: '\u09a8\u09a4\u09c1\u09a8 \u09ae\u09cd\u09af\u09be\u099a',
+      playerA: '\u0996\u09c7\u09b2\u09cb\u09af\u09bc\u09be\u09a1\u09bc A-\u098f\u09b0 \u09a8\u09be\u09ae',
+      playerB: '\u0996\u09c7\u09b2\u09cb\u09af\u09bc\u09be\u09a1\u09bc B-\u098f\u09b0 \u09a8\u09be\u09ae',
+      bestOf: '\u09ae\u09cd\u09af\u09be\u099a\u09c7\u09b0 \u09ab\u09b0\u09ae\u09cd\u09af\u09be\u099f',
+      best1: '\u09ac\u09c7\u09b8\u09cd\u099f \u0985\u09ac \u09e7',
+      best3: '\u09ac\u09c7\u09b8\u09cd\u099f \u0985\u09ac \u09e9',
+      best5: '\u09ac\u09c7\u09b8\u09cd\u099f \u0985\u09ac \u09eb',
+      target: '\u09aa\u09cd\u09b0\u09a4\u09bf \u09b8\u09c7\u099f\u09c7 \u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f',
+      start: '\u09ae\u09cd\u09af\u09be\u099a \u09b6\u09c1\u09b0\u09c1 \u0995\u09b0\u09c1\u09a8',
+      nameError: '\u09a6\u09c1\u0987 \u0996\u09c7\u09b2\u09cb\u09af\u09bc\u09be\u09a1\u09bc\u09c7\u09b0 \u09a8\u09be\u09ae \u09a6\u09bf\u09a8 (\u09e7\u2013\u09ea\u09e6 \u0985\u0995\u09cd\u09b7\u09b0)\u0964',
+      serving: '\u09b8\u09be\u09b0\u09cd\u09ad \u0995\u09b0\u099b\u09c7\u09a8',
+      courtRight: '\u09a1\u09be\u09a8 \u0995\u09cb\u09b0\u09cd\u099f',
+      courtLeft: '\u09ac\u09be\u09ae \u0995\u09cb\u09b0\u09cd\u099f',
+      set: '\u09b8\u09c7\u099f',
+      setsWon: '\u099c\u09c7\u09a4\u09be \u09b8\u09c7\u099f',
+      rallies: '\u09b0\u200d\u09cd\u09af\u09be\u09b2\u09bf',
+      pointA: '\u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f: ',
+      pointB: '\u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f: ',
+      undo: '\u09b6\u09c7\u09b7 \u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f \u09ac\u09be\u09a4\u09bf\u09b2',
+      swap: '\u09aa\u09be\u09b6 \u09ac\u09a6\u09b2\u09be\u09a8',
+      endMatch: '\u0986\u0997\u09c7\u0987 \u09ae\u09cd\u09af\u09be\u099a \u09b6\u09c7\u09b7 \u0995\u09b0\u09c1\u09a8',
+      matchOver: '\u09ae\u09cd\u09af\u09be\u099a \u09b6\u09c7\u09b7',
+      wins: '\u099c\u09bf\u09a4\u09c7\u099b\u09c7\u09a8',
+      newMatchBtn: '\u09a8\u09a4\u09c1\u09a8 \u09ae\u09cd\u09af\u09be\u099a',
+      historyTitle: '\u09b8\u09ae\u09be\u09aa\u09cd\u09a4 \u09ae\u09cd\u09af\u09be\u099a',
+      historyEmpty: '\u098f\u0996\u09a8\u09cb \u0995\u09cb\u09a8\u09cb \u09b8\u09ae\u09be\u09aa\u09cd\u09a4 \u09ae\u09cd\u09af\u09be\u099a \u09a8\u09c7\u0987\u0964 \u098f\u0995\u099f\u09bf \u09ae\u09cd\u09af\u09be\u099a \u09b6\u09c7\u09b7 \u0995\u09b0\u09b2\u09c7 \u098f\u0996\u09be\u09a8\u09c7 \u09a6\u09c7\u0996\u09be \u09af\u09be\u09ac\u09c7\u0964',
+      exportBtn: '\u0987\u09a4\u09bf\u09b9\u09be\u09b8 \u098f\u0995\u09cd\u09b8\u09aa\u09cb\u09b0\u09cd\u099f (JSON)',
+      importBtn: '\u0987\u09a4\u09bf\u09b9\u09be\u09b8 \u0987\u09ae\u09aa\u09cb\u09b0\u09cd\u099f (JSON)',
+      importOk: '\u0987\u09ae\u09aa\u09cb\u09b0\u09cd\u099f \u09b8\u09ab\u09b2 \u2014 \u0987\u09a4\u09bf\u09b9\u09be\u09b8 \u09aa\u09cd\u09b0\u09a4\u09bf\u09b8\u09cd\u09a5\u09be\u09aa\u09bf\u09a4 \u09b9\u09af\u09bc\u09c7\u099b\u09c7\u0964',
+      importBad: '\u0987\u09ae\u09aa\u09cb\u09b0\u09cd\u099f \u09ac\u09be\u09a4\u09bf\u09b2: \u09ab\u09be\u0987\u09b2\u099f\u09bf \u09ac\u09c8\u09a7 \u0987\u09a4\u09bf\u09b9\u09be\u09b8 \u098f\u0995\u09cd\u09b8\u09aa\u09cb\u09b0\u09cd\u099f \u09a8\u09af\u09bc\u0964 \u0986\u09aa\u09a8\u09be\u09b0 \u09a1\u09c7\u099f\u09be \u0985\u09aa\u09b0\u09bf\u09ac\u09b0\u09cd\u09a4\u09bf\u09a4 \u0986\u099b\u09c7\u0964',
+      eraseBtn: '\u09b8\u09ac \u0987\u09a4\u09bf\u09b9\u09be\u09b8 \u09ae\u09c1\u099b\u09c1\u09a8',
+      eraseHint: '\u09a8\u09bf\u099a\u09c7 DELETE \u09b2\u09bf\u0996\u09c1\u09a8, \u09a4\u09be\u09b0\u09aa\u09b0 \u09ae\u09c1\u099b\u09c1\u09a8 \u099a\u09be\u09aa\u09c1\u09a8\u0964',
+      eraseOk: '\u0987\u09a4\u09bf\u09b9\u09be\u09b8 \u09ae\u09cb\u099b\u09be \u09b9\u09af\u09bc\u09c7\u099b\u09c7\u0964',
+      eraseBad: '\u09ae\u09c1\u099b\u09a4\u09c7 \u09b9\u09b2\u09c7 \u09a0\u09bf\u0995 DELETE \u09b2\u09bf\u0996\u09c1\u09a8\u0964',
+      elapsed: '\u0985\u09a4\u09bf\u09ac\u09be\u09b9\u09bf\u09a4 \u09b8\u09ae\u09af\u09bc',
+      setHistory: '\u09b8\u09c7\u099f\u09c7\u09b0 \u09b8\u09cd\u0995\u09cb\u09b0',
+      disclaimer: '\u09ac\u09cd\u09af\u0995\u09cd\u09a4\u09bf\u0997\u09a4 \u09b8\u09cd\u0995\u09cb\u09b0\u09ac\u09cb\u09b0\u09cd\u09a1 \u099f\u09c1\u09b2\u0964 \u09b0\u200d\u09cd\u09af\u09be\u09b2\u09bf \u09b8\u09cd\u0995\u09cb\u09b0\u09bf\u0982: \u09e8 \u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f\u09c7\u09b0 \u09ac\u09cd\u09af\u09ac\u09a7\u09be\u09a8\u09c7 \u09b8\u09c7\u099f \u099c\u09af\u09bc, \u09b8\u09b0\u09cd\u09ac\u09cb\u099a\u09cd\u099a \u09e9\u09e6 (\u09e8\u09e7 \u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f), \u09e8\u09e7 (\u09e7\u09eb \u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f) \u09ac\u09be \u09e7\u09eb (\u09e7\u09e7 \u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f) \u09aa\u09af\u09bc\u09c7\u09a8\u09cd\u099f\u0964 BWF \u09ac\u09be \u0995\u09cb\u09a8\u09cb \u09ab\u09c7\u09a1\u09be\u09b0\u09c7\u09b6\u09a8\u09c7\u09b0 \u09b8\u0999\u09cd\u0997\u09c7 \u09b8\u09ae\u09cd\u09aa\u09c3\u0995\u09cd\u09a4 \u09a8\u09af\u09bc\u0964'
+    }
+  };
+  function bnDigits(s) {
+    var map = { '0': '\u09e6', '1': '\u09e7', '2': '\u09e8', '3': '\u09e9', '4': '\u09ea', '5': '\u09eb', '6': '\u09ec', '7': '\u09ed', '8': '\u09ee', '9': '\u09ef' };
+    return String(s).replace(/[0-9]/g, function (d) { return map[d]; });
+  }
+  var api = { STR: STR, bnDigits: bnDigits };
+  if (typeof module !== 'undefined' && module.exports) module.exports = api;
+  root.BadmintonI18n = api;
+})(typeof window !== 'undefined' ? window : globalThis);

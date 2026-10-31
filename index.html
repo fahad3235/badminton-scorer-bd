@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Badminton Scorer BD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <h1 data-i18n="title">Badminton Scorer BD</h1>
+  <button id="langBtn" class="lang-btn" type="button">\u09ac\u09be\u0982\u09b2\u09be</button>
+</header>
+<p class="tagline" data-i18n="tagline">Rally scoring for Bangladeshi courts \u2014 offline, no account needed.</p>
+
+<nav class="tabs" role="tablist">
+  <button id="tab-score" class="tab active" type="button" data-i18n="tabScore">Score</button>
+  <button id="tab-history" class="tab" type="button" data-i18n="tabHistory">History</button>
+  <button id="tab-data" class="tab" type="button" data-i18n="tabData">Data</button>
+</nav>
+
+<section id="panel-score">
+  <div id="setupCard" class="card">
+    <h2 data-i18n="setupTitle">New match</h2>
+    <label><span data-i18n="playerA">Player A name</span>
+      <input id="nameA" type="text" maxlength="40" value="Player A" autocomplete="off"></label>
+    <label><span data-i18n="playerB">Player B name</span>
+      <input id="nameB" type="text" maxlength="40" value="Player B" autocomplete="off"></label>
+    <label><span data-i18n="bestOf">Match format</span>
+      <select id="bestOf">
+        <option value="1" data-i18n="best1">Best of 1</option>
+        <option value="3" selected data-i18n="best3">Best of 3</option>
+        <option value="5" data-i18n="best5">Best of 5</option>
+      </select></label>
+    <label><span data-i18n="target">Points per set</span>
+      <select id="target">
+        <option value="21" selected>21</option>
+        <option value="15">15</option>
+        <option value="11">11</option>
+      </select></label>
+    <p id="setupError" class="error" role="alert"></p>
+    <button id="startBtn" class="primary" type="button" data-i18n="start">Start match</button>
+  </div>
+
+  <div id="scoreCard" class="card" hidden>
+    <div id="resultBanner" class="banner" hidden></div>
+    <div class="scoreboard">
+      <div class="side">
+        <div id="nameLeft" class="pname">Player A</div>
+        <div id="scoreLeft" class="pscore">0</div>
+        <button id="pointBtnA" class="point-btn" type="button">Point: Player A</button>
+      </div>
+      <div class="vs">\u2013</div>
+      <div class="side">
+        <div id="nameRight" class="pname">Player B</div>
+        <div id="scoreRight" class="pscore">0</div>
+        <button id="pointBtnB" class="point-btn" type="button">Point: Player B</button>
+      </div>
+    </div>
+    <p id="serverLine" class="meta"></p>
+    <p id="setLine" class="meta"></p>
+    <p id="elapsedLine" class="meta"></p>
+    <p id="setScores" class="meta"></p>
+    <div class="actions">
+      <button id="undoBtn" type="button" data-i18n="undo">Undo last point</button>
+      <button id="swapBtn" type="button" data-i18n="swap">Swap sides</button>
+      <button id="endBtn" type="button" data-i18n="endMatch">End match early</button>
+      <button id="newMatchBtn" type="button" data-i18n="newMatchBtn">New match</button>
+    </div>
+  </div>
+</section>
+
+<section id="panel-history" hidden>
+  <div class="card">
+    <h2 data-i18n="historyTitle">Finished matches</h2>
+    <div id="historyList"></div>
+  </div>
+</section>
+
+<section id="panel-data" hidden>
+  <div class="card">
+    <h2 data-i18n="tabData">Data</h2>
+    <button id="exportBtn" type="button" data-i18n="exportBtn">Export history (JSON)</button>
+    <label class="file-label"><span data-i18n="importBtn">Import history (JSON)</span>
+      <input id="importFile" type="file" accept="application/json,.json"></label>
+    <p class="muted" data-i18n="eraseHint">Type DELETE below, then press Erase.</p>
+    <input id="eraseInput" type="text" maxlength="10" placeholder="DELETE" autocomplete="off">
+    <button id="eraseBtn" class="danger" type="button" data-i18n="eraseBtn">Erase all history</button>
+    <p id="dataMsg" class="meta" role="status"></p>
+  </div>
+</section>
+
+<footer class="footer" data-i18n="disclaimer">Personal scoreboard tool. Rally scoring: win a set by 2 clear points, capped at 30 (21-point), 21 (15-point) or 15 (11-point) points. Not affiliated with BWF or any federation.</footer>
+
+<script src="js/logic.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

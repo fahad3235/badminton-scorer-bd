@@ -1,4 +1,4 @@
-# TEST RESULTS — badminton-scorer-bd (run #193, 16:00 slot, 2026-10-31)
+# TEST RESULTS — badminton-scorer-bd (run #197, 16:00 slot, 2026-10-31)
 
 ## Unit tests (Node): 13/13 passed
 `node tests/logic.test.js` — set-win rules incl. deuce (21-20 not won, 22-20 won),
@@ -39,4 +39,16 @@ escapes (build-time escape step, verified by decoding in node: title renders
 js/, index.html, style.css, tests/ returns zero matches.
 
 ## Publish
-(Recorded after push/Pages verification — see ledger row.)
+- Repo: https://github.com/fahad3235/badminton-scorer-bd (PUBLIC, created via
+  browser 2026-10-31, verified empty before push).
+- Main push: commit cb90222dcc9f78e039d328ea7ae9c8495ea4e9aa on main (10 files,
+  snapshot push-files, approval granted); remote index.html + js/i18n.js +
+  js/app.js + js/logic.js + style.css + README.md verified byte-identical to
+  local, Bengali escapes intact.
+- Pages: enabled main/root via browser; live verified directly 2026-10-31
+  ~17:25 +06 — HTTP 200, live index.html byte-identical to local (4,372 bytes),
+  live js/app.js byte-identical (9,106 bytes), js/i18n.js HTTP 200.
+- Renumber note: the main push's commit message carries an early "#193"
+  estimate (computed before concurrent slots recorded runs #193–#196); the
+  canonical ledger number is #197. This file was corrected to #197 in a
+  follow-up commit.
